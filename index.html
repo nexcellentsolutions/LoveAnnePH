@@ -439,9 +439,13 @@ input[type=radio],input[type=checkbox]{accent-color:var(--deep-rose);}
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
 // ---------- CONFIG ----------
-// emailjs.init("YOUR_PUBLIC_KEY"); // <-- set this before launch
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+if (window.emailjs) {
+  try { emailjs.init("EG-R78daj0fSOLXqp"); } catch (err) { console.error('EmailJS init failed:', err); }
+} else {
+  console.warn('EmailJS library did not load — check network/CDN access.');
+}
+const EMAILJS_SERVICE_ID = "service_uueut7j";
+const EMAILJS_TEMPLATE_ID = "template_bk1jrns";
 const PROMO_DEADLINE = new Date("2026-07-03T23:59:59+08:00");
 
 // ---------- NAV ----------
