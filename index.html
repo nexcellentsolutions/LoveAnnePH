@@ -461,73 +461,85 @@ document.querySelectorAll('#mobileMenu a').forEach(a => a.addEventListener('clic
   document.getElementById('mobileMenu').classList.add('hidden');
 }));
 
+// ---------- DYNAMIC CONTENT (each block isolated so one error can't block the rest) ----------
+
+function safeRun(label, fn){
+  try { fn(); } catch (err) { console.error('Error rendering ' + label + ':', err); }
+}
+
+safeRun('Events We Cater', () => {
+  const events = [
+    ['💍','Wedding'], ['🎂','Birthday'], ['🏢','Corporate Events'], ['👑','Debut'],
+    ['🕊️','Christening'], ['💞','Anniversary'], ['🍼','Baby Shower'], ['🌷','Bridal Shower'],
+    ['💎','Engagement'], ['🎓','Graduation'], ['✨','Other Special Events']
+  ];
+  document.getElementById('eventsGrid').innerHTML = events.map((e,i) => `
+    <div class="reveal glass rounded-2xl p-6 text-center card-hover" style="transition-delay:${(i%4)*0.05}s">
+      <div class="text-3xl mb-2">${e[0]}</div>
+      <p class="font-display font-medium">${e[1]}</p>
+    </div>`).join('');
+});
+
+safeRun('How It Works', () => {
+  const steps = [
+    ['1','Choose your Event'], ['2','Choose your Package'], ['3','Pay Online'],
+    ['4','Fill Up Event Details'], ['5','We Create Your RSVP'], ['6','Receive Your Finished Invitation']
+  ];
+  document.getElementById('howItWorks').innerHTML = steps.map((s,i) => `
+    <div class="reveal relative flex items-start gap-6 md:justify-${i%2===0?'start':'end'} md:flex-row${i%2===1?'-reverse':''}" style="transition-delay:${i*0.06}s">
+      <div class="w-12 h-12 shrink-0 rounded-full btn-primary flex items-center justify-center font-display font-semibold z-10">${s[0]}</div>
+      <div class="glass rounded-2xl p-5 max-w-sm"><p class="font-display text-lg">${s[1]}</p></div>
+    </div>`).join('');
+});
+
+safeRun('Why Choose Us', () => {
+  const why = ['Elegant Designs','Fast Turnaround','Affordable Packages','Unlimited Support','Mobile Friendly','Premium Quality','Trusted Service','Easy RSVP','Modern Invitation Website'];
+  document.getElementById('whyGrid').innerHTML = why.map((w,i) => `
+    <div class="reveal glass rounded-2xl p-5 text-center card-hover" style="transition-delay:${(i%5)*0.05}s">
+      <p class="font-display font-medium text-sm">${w}</p>
+    </div>`).join('');
+});
+
+safeRun('Testimonials', () => {
+  const testimonials = [
+    ['Andrea & Miguel','Wedding Client','Our guests said the RSVP felt like a real invitation card. Everything was seamless on the big day.'],
+    ['Mommy Liz','Birthday Client',"Booking the venue list and tracking RSVPs for my daughter's 18th was so much easier this way."],
+    ['Coastal Realty Corp.','Corporate Client','Clean, professional, and our attendees actually used it. Exactly what we needed for our anniversary gala.']
+  ];
+  document.getElementById('testimonialGrid').innerHTML = testimonials.map((t,i) => `
+    <div class="reveal glass rounded-2xl p-6 card-hover" style="transition-delay:${i*0.08}s">
+      <p class="text-[var(--champagne)] text-lg mb-2">★★★★★</p>
+      <p class="text-sm text-[var(--ink)]/80 italic">"${t[2]}"</p>
+      <p class="mt-4 font-display font-medium">${t[0]}</p>
+      <p class="text-xs text-[var(--ink)]/50">${t[1]}</p>
+    </div>`).join('');
+});
+
+safeRun('FAQ', () => {
+  const faqs = [
+    ['How long is the turnaround?','Most Smart RSVP orders are completed within 2–3 business days; full website invitations take 4–6 business days.'],
+    ['Can I edit my invitation?','Yes, you can request revisions to text, colors, and photos after the first draft is delivered.'],
+    ['Can I request revisions?','We include free minor revisions; major redesigns may carry a small fee.'],
+    ['Can I customize colors?','Absolutely, just share your preferred palette in the order form.'],
+    ['Can I change RSVP details?','Yes, guest list edits can be made anytime by messaging our team.'],
+    ['How do guests RSVP?','Guests simply open your unique link, search their name, and confirm attendance in seconds.']
+  ];
+  document.getElementById('faqList').innerHTML = faqs.map((f,i) => `
+    <div class="reveal glass rounded-2xl overflow-hidden" style="transition-delay:${i*0.04}s">
+      <button class="w-full text-left px-6 py-4 flex justify-between items-center font-medium" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('span').classList.toggle('rotate-45')">
+        ${f[0]} <span class="text-[var(--deep-rose)] text-xl transition-transform">+</span>
+      </button>
+      <div class="hidden px-6 pb-4 text-sm text-[var(--ink)]/70">${f[1]}</div>
+    </div>`).join('');
+});
+
 // ---------- SCROLL REVEAL ----------
-const revealEls = document.querySelectorAll('.reveal');
+// Set up AFTER all dynamic content above is injected, so newly created .reveal
+// elements (event cards, why-choose cards, testimonials, FAQ, etc.) are observed too.
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
 }, { threshold: 0.15 });
-revealEls.forEach(el => io.observe(el));
-
-// ---------- DYNAMIC CONTENT: Events We Cater ----------
-const events = [
-  ['💍','Wedding'], ['🎂','Birthday'], ['🏢','Corporate Events'], ['👑','Debut'],
-  ['🕊️','Christening'], ['💞','Anniversary'], ['🍼','Baby Shower'], ['🌷','Bridal Shower'],
-  ['💎','Engagement'], ['🎓','Graduation'], ['✨','Other Special Events']
-];
-document.getElementById('eventsGrid').innerHTML = events.map((e,i) => `
-  <div class="reveal glass rounded-2xl p-6 text-center card-hover" style="transition-delay:${(i%4)*0.05}s">
-    <div class="text-3xl mb-2">${e[0]}</div>
-    <p class="font-display font-medium">${e[1]}</p>
-  </div>`).join('');
-
-// ---------- HOW IT WORKS ----------
-const steps = [
-  ['1','Choose your Event'], ['2','Choose your Package'], ['3','Pay Online'],
-  ['4','Fill Up Event Details'], ['5','We Create Your RSVP'], ['6','Receive Your Finished Invitation']
-];
-document.getElementById('howItWorks').innerHTML = steps.map((s,i) => `
-  <div class="reveal relative flex items-start gap-6 md:justify-${i%2===0?'start':'end'} md:flex-row${i%2===1?'-reverse':''}" style="transition-delay:${i*0.06}s">
-    <div class="w-12 h-12 shrink-0 rounded-full btn-primary flex items-center justify-center font-display font-semibold z-10">${s[0]}</div>
-    <div class="glass rounded-2xl p-5 max-w-sm"><p class="font-display text-lg">${s[1]}</p></div>
-  </div>`).join('');
-
-// ---------- WHY CHOOSE US ----------
-const why = ['Elegant Designs','Fast Turnaround','Affordable Packages','Unlimited Support','Mobile Friendly','Premium Quality','Trusted Service','Easy RSVP','Modern Invitation Website'];
-document.getElementById('whyGrid').innerHTML = why.map((w,i) => `
-  <div class="reveal glass rounded-2xl p-5 text-center card-hover" style="transition-delay:${(i%5)*0.05}s">
-    <p class="font-display font-medium text-sm">${w}</p>
-  </div>`).join('');
-
-// ---------- TESTIMONIALS ----------
-const testimonials = [
-  ['Andrea & Miguel','Wedding Client','Our guests said the RSVP felt like a real invitation card. Everything was seamless on the big day.'],
-  ['Mommy Liz','Birthday Client',"Booking the venue list and tracking RSVPs for my daughter's 18th was so much easier this way."],
-  ['Coastal Realty Corp.','Corporate Client','Clean, professional, and our attendees actually used it. Exactly what we needed for our anniversary gala.']
-];
-document.getElementById('testimonialGrid').innerHTML = testimonials.map((t,i) => `
-  <div class="reveal glass rounded-2xl p-6 card-hover" style="transition-delay:${i*0.08}s">
-    <p class="text-[var(--champagne)] text-lg mb-2">★★★★★</p>
-    <p class="text-sm text-[var(--ink)]/80 italic">"${t[2]}"</p>
-    <p class="mt-4 font-display font-medium">${t[0]}</p>
-    <p class="text-xs text-[var(--ink)]/50">${t[1]}</p>
-  </div>`).join('');
-
-// ---------- FAQ ----------
-const faqs = [
-  ['How long is the turnaround?','Most Smart RSVP orders are completed within 2–3 business days; full website invitations take 4–6 business days.'],
-  ['Can I edit my invitation?','Yes, you can request revisions to text, colors, and photos after the first draft is delivered.'],
-  ['Can I request revisions?','We include free minor revisions; major redesigns may carry a small fee.'],
-  ['Can I customize colors?','Absolutely, just share your preferred palette in the order form.'],
-  ['Can I change RSVP details?','Yes, guest list edits can be made anytime by messaging our team.'],
-  ['How do guests RSVP?','Guests simply open your unique link, search their name, and confirm attendance in seconds.']
-];
-document.getElementById('faqList').innerHTML = faqs.map((f,i) => `
-  <div class="reveal glass rounded-2xl overflow-hidden" style="transition-delay:${i*0.04}s">
-    <button class="w-full text-left px-6 py-4 flex justify-between items-center font-medium" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('span').classList.toggle('rotate-45')">
-      ${f[0]} <span class="text-[var(--deep-rose)] text-xl transition-transform">+</span>
-    </button>
-    <div class="hidden px-6 pb-4 text-sm text-[var(--ink)]/70">${f[1]}</div>
-  </div>`).join('');
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
 // ---------- ORDER FORM LOGIC ----------
 let currentStep = 1;
