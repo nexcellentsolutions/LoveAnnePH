@@ -9,7 +9,6 @@
 <meta property="og:title" content="Love, Anne — Beautiful Digital Invitations & Smart RSVP System">
 <meta property="og:description" content="Make your special moments unforgettable with elegant digital invitations and an intelligent RSVP system.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://placehold.co/1200x630/8C3A52/F7E1E5?text=Love%2C+Anne">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='75' x='10' font-size='70'%3E%F0%9F%A4%8D%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
@@ -29,50 +28,37 @@ body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--cream);over
 .font-display{font-family:'Playfair Display',serif;}
 .font-script{font-family:'Parisienne',cursive;}
 .font-accent{font-family:'Cormorant Garamond',serif;}
-.glass{
-  background:rgba(255,255,255,0.55);
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-  border:1px solid rgba(255,255,255,0.6);
-}
+.glass{background:rgba(255,255,255,0.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.6);}
 .grad-bg{background:linear-gradient(135deg,var(--blush) 0%,var(--cream) 45%,#F1D9CB 100%);}
 .grad-text{background:linear-gradient(120deg,var(--deep-rose),var(--rose-gold),var(--champagne));-webkit-background-clip:text;background-clip:text;color:transparent;}
-.btn-primary{
-  background:linear-gradient(120deg,var(--deep-rose),var(--rose-gold));
-  color:#fff;border-radius:999px;
-  box-shadow:0 8px 24px -8px rgba(126,47,71,0.55);
-  transition:transform .25s ease, box-shadow .25s ease;
-}
+.btn-primary{background:linear-gradient(120deg,var(--deep-rose),var(--rose-gold));color:#fff;border-radius:999px;box-shadow:0 8px 24px -8px rgba(126,47,71,0.55);transition:transform .25s ease,box-shadow .25s ease;}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px -8px rgba(126,47,71,0.65);}
-.btn-outline{
-  border:1.5px solid var(--rose-gold);color:var(--deep-rose);border-radius:999px;
-  transition:all .25s ease;background:rgba(255,255,255,0.4);
-}
+.btn-outline{border:1.5px solid var(--rose-gold);color:var(--deep-rose);border-radius:999px;transition:all .25s ease;background:rgba(255,255,255,0.4);}
 .btn-outline:hover{background:var(--blush);}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease, transform .8s ease;}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease;}
 .reveal.show{opacity:1;transform:translateY(0);}
-.card-hover{transition:transform .35s ease, box-shadow .35s ease;}
+.card-hover{transition:transform .35s ease,box-shadow .35s ease;}
 .card-hover:hover{transform:translateY(-6px);box-shadow:0 20px 40px -16px rgba(126,47,71,.35);}
-.seal{
-  width:72px;height:72px;border-radius:50%;
-  background:radial-gradient(circle at 32% 28%, #E3B679, var(--rose-gold) 55%, var(--deep-rose) 100%);
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 10px 22px -8px rgba(126,47,71,0.5), inset 0 0 0 3px rgba(255,255,255,0.25);
-  transform:scale(0) rotate(-35deg); transition: transform .6s cubic-bezier(.2,1.4,.4,1);
-}
-.seal.show{transform:scale(1) rotate(0deg);}
-nav.scrolled{background:rgba(255,248,244,0.85);backdrop-filter:blur(10px);box-shadow:0 4px 18px -10px rgba(126,47,71,.25);}
+nav.scrolled{background:rgba(255,248,244,0.92);backdrop-filter:blur(10px);box-shadow:0 4px 18px -10px rgba(126,47,71,.25);}
 .float-petal{position:absolute;border-radius:50% 0 50% 50%;opacity:.5;pointer-events:none;}
 input[type=radio],input[type=checkbox]{accent-color:var(--deep-rose);}
 .step-active{background:linear-gradient(120deg,var(--deep-rose),var(--rose-gold));color:#fff;}
 .fade-section{scroll-margin-top:90px;}
 ::selection{background:var(--blush);color:var(--deep-rose);}
 .fancy-divider{height:1px;background:linear-gradient(90deg,transparent,var(--rose-gold),transparent);}
+.field{width:100%;border-radius:12px;border:1px solid rgba(183,110,121,0.35);background:rgba(255,255,255,0.7);padding:12px 16px;font-family:'Jost',sans-serif;font-size:14px;outline:none;transition:box-shadow .2s;}
+.field:focus{box-shadow:0 0 0 2px rgba(183,110,121,0.4);}
+/* TikTok embed overrides */
+.tiktok-wrap{position:relative;width:100%;overflow:hidden;border-radius:16px;background:#000;}
+.tiktok-wrap iframe{width:100%;display:block;border:0;}
+/* How it works timeline */
+.hiw-step{display:flex;gap:1.5rem;align-items:flex-start;position:relative;}
+.hiw-num{min-width:48px;height:48px;border-radius:50%;background:linear-gradient(120deg,var(--deep-rose),var(--rose-gold));color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:600;font-size:1.1rem;box-shadow:0 6px 16px -6px rgba(126,47,71,0.5);position:relative;z-index:1;}
 </style>
 </head>
 <body class="grad-bg">
 
-<!-- floating petals decoration -->
+<!-- floating petals -->
 <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
   <div class="float-petal" style="width:120px;height:120px;background:var(--blush);top:6%;left:-40px;"></div>
   <div class="float-petal" style="width:200px;height:200px;background:#F1D9CB;top:40%;right:-80px;"></div>
@@ -98,37 +84,19 @@ input[type=radio],input[type=checkbox]{accent-color:var(--deep-rose);}
   </div>
 </nav>
 
-<!-- HERO -->
-<section id="home" class="relative pt-40 pb-24 px-6 fade-section">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
-    <div class="reveal">
-      <p class="font-accent italic text-lg text-[var(--rose-gold)] mb-3">For every beautiful beginning</p>
-      <h1 class="font-display text-5xl md:text-6xl leading-tight font-semibold">
-        Beautiful Digital Invitations &amp; <span class="grad-text">Smart RSVP System</span>
-      </h1>
-      <p class="mt-6 text-lg text-[var(--ink)]/80 max-w-xl">
-        Make your special moments unforgettable with elegant digital invitations and an intelligent RSVP system for Weddings, Birthdays, Corporate Events, Debuts, Baptisms, Anniversaries, and more.
-      </p>
-      <div class="mt-8 flex flex-wrap gap-4">
-        <a href="#order" class="btn-primary px-8 py-3.5 font-medium">Order Now</a>
-        <a href="#samples" class="btn-outline px-8 py-3.5 font-medium">View Demo</a>
-      </div>
-    </div>
-    <div class="reveal relative" style="transition-delay:.15s">
-      <div class="relative glass rounded-3xl p-6 shadow-2xl">
-        <div class="rounded-2xl overflow-hidden border border-white/60 shadow-inner bg-white/40 grid grid-cols-2 gap-3 p-3">
-          <div class="col-span-2 rounded-xl overflow-hidden">
-            <img src="https://placehold.co/700x420/7E2F47/F7E1E5?font=playfair-display&text=Wedding+Invitation+Website" class="w-full h-44 object-cover">
-          </div>
-          <div class="rounded-xl overflow-hidden">
-            <img src="https://placehold.co/340x260/B76E79/FFF8F4?font=playfair-display&text=RSVP+Page" class="w-full h-32 object-cover">
-          </div>
-          <div class="rounded-xl overflow-hidden">
-            <img src="https://placehold.co/340x260/D4AF7A/3A2E32?font=playfair-display&text=Mobile+View" class="w-full h-32 object-cover">
-          </div>
-        </div>
-        <div class="absolute -bottom-6 -left-6 seal show"><span class="text-white font-display text-xl">A&amp;L</span></div>
-      </div>
+<!-- HERO (centered) -->
+<section id="home" class="relative pt-40 pb-24 px-6 fade-section text-center">
+  <div class="max-w-4xl mx-auto reveal">
+    <p class="font-accent italic text-lg text-[var(--rose-gold)] mb-3">For every beautiful beginning</p>
+    <h1 class="font-display text-5xl md:text-6xl leading-tight font-semibold">
+      Beautiful Digital Invitations &amp; <span class="grad-text">Smart RSVP System</span>
+    </h1>
+    <p class="mt-6 text-lg text-[var(--ink)]/80 max-w-2xl mx-auto">
+      Make your special moments unforgettable with elegant digital invitations and an intelligent RSVP system for Weddings, Birthdays, Corporate Events, Debuts, Baptisms, Anniversaries, and more.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-4 justify-center">
+      <a href="#order" class="btn-primary px-8 py-3.5 font-medium">Order Now</a>
+      <a href="#samples" class="btn-outline px-8 py-3.5 font-medium">View Demo</a>
     </div>
   </div>
 </section>
@@ -141,38 +109,99 @@ input[type=radio],input[type=checkbox]{accent-color:var(--deep-rose);}
     <p class="uppercase tracking-[0.25em] text-sm text-[var(--rose-gold)] font-medium">Our Packages</p>
     <h2 class="font-display text-4xl md:text-5xl font-semibold mt-3">Services Crafted With Love</h2>
   </div>
-  <div class="max-w-5xl mx-auto mt-14 grid md:grid-cols-2 gap-8">
-    <!-- Smart RSVP -->
-    <div class="reveal glass rounded-3xl p-8 card-hover relative overflow-hidden" style="transition-delay:.05s">
-      <span class="absolute top-6 right-6 bg-[var(--deep-rose)] text-white text-xs px-3 py-1 rounded-full uppercase tracking-wide">Promo</span>
-      <h3 class="font-display text-2xl font-semibold">Smart RSVP</h3>
-      <div class="mt-4 flex items-baseline gap-2">
-        <span class="text-4xl font-display font-bold text-[var(--deep-rose)]">₱799</span>
-        <span class="text-sm text-[var(--ink)]/50">promo price</span>
+  <div class="max-w-6xl mx-auto mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    <!-- Sponsors Invitation -->
+    <div class="reveal glass rounded-3xl p-7 card-hover relative overflow-hidden flex flex-col" style="transition-delay:.04s">
+      <span class="absolute top-5 right-5 bg-[var(--rose-gold)] text-white text-xs px-3 py-1 rounded-full uppercase tracking-wide">Promo</span>
+      <h3 class="font-display text-xl font-semibold pr-16">Sponsors Invitation</h3>
+      <div class="mt-3 flex items-baseline gap-2">
+        <span class="text-3xl font-display font-bold text-[var(--deep-rose)]">₱699</span>
+        <span class="text-xs text-[var(--ink)]/50">promo price</span>
       </div>
-      <p class="text-xs text-[var(--rose-gold)] mt-1">Valid until July 3, 2026</p>
-      <ul class="mt-6 space-y-2 text-sm text-[var(--ink)]/80">
-        <li>✓ Smart RSVP</li><li>✓ Mobile Friendly</li><li>✓ Guest Management</li>
-        <li>✓ QR Code Ready</li><li>✓ RSVP Confirmation</li><li>✓ Unlimited Views</li><li>✓ Fast Delivery</li>
+      <p class="text-xs text-[var(--rose-gold)] mt-1 mb-4">Valid until August 10, 2026</p>
+      <ul class="space-y-1.5 text-sm text-[var(--ink)]/80 flex-1">
+        <li>✓ Smart Sponsors Invitation Website</li>
+        <li>✓ Personalized design per your theme</li>
+        <li>✓ With Dashboard</li>
+        <li>✓ Mobile Friendly</li>
+        <li>✓ Guest Management Website</li>
+        <li>✓ Sponsors Invitation Confirmation</li>
+        <li>✓ Unlimited Views</li>
+        <li>✓ Fast Delivery</li>
       </ul>
-      <button onclick="selectPackage('Smart RSVP', 799)" class="btn-primary w-full mt-8 py-3 font-medium">Order Smart RSVP</button>
+      <button onclick="selectPackage('Sponsors Invitation',699)" class="btn-primary w-full mt-6 py-3 text-sm font-medium">Order Sponsors Invitation</button>
     </div>
-    <!-- Website + RSVP -->
-    <div class="reveal glass rounded-3xl p-8 card-hover relative overflow-hidden ring-2 ring-[var(--champagne)]" style="transition-delay:.15s">
-      <span class="absolute top-6 right-6 bg-[var(--champagne)] text-white text-xs px-3 py-1 rounded-full uppercase tracking-wide">Best Value</span>
-      <h3 class="font-display text-2xl font-semibold">Website Invitation + Smart RSVP</h3>
-      <div class="mt-4 flex items-baseline gap-2">
-        <span class="text-4xl font-display font-bold text-[var(--deep-rose)]">₱2,499</span>
-        <span class="text-sm text-[var(--ink)]/50">promo price</span>
+
+    <!-- Regular Smart RSVP -->
+    <div class="reveal glass rounded-3xl p-7 card-hover relative overflow-hidden flex flex-col" style="transition-delay:.08s">
+      <span class="absolute top-5 right-5 bg-[var(--deep-rose)] text-white text-xs px-3 py-1 rounded-full uppercase tracking-wide">Promo</span>
+      <h3 class="font-display text-xl font-semibold pr-16">Regular Smart RSVP</h3>
+      <div class="mt-3 flex items-baseline gap-2">
+        <span class="text-3xl font-display font-bold text-[var(--deep-rose)]">₱899</span>
+        <span class="text-xs text-[var(--ink)]/50">promo price</span>
       </div>
-      <p class="text-xs text-[var(--rose-gold)] mt-1">Valid until July 3, 2026</p>
-      <ul class="mt-6 space-y-2 text-sm text-[var(--ink)]/80 grid grid-cols-1">
-        <li>✓ Premium Invitation Website</li><li>✓ Smart RSVP</li><li>✓ Countdown Timer</li><li>✓ Event Details</li>
-        <li>✓ Gallery</li><li>✓ Maps</li><li>✓ Background Music</li><li>✓ Dress Code</li>
-        <li>✓ Love Story Timeline</li><li>✓ QR Code</li><li>✓ Mobile Friendly</li>
+      <p class="text-xs text-[var(--rose-gold)] mt-1 mb-4">Valid until August 10, 2026</p>
+      <ul class="space-y-1.5 text-sm text-[var(--ink)]/80 flex-1">
+        <li>✓ Smart RSVP Website</li>
+        <li>✓ Personalized design per your theme</li>
+        <li>✓ Open or Fixed Companion Only</li>
+        <li>✓ Mobile Friendly</li>
+        <li>✓ Sheets Guest Management</li>
+        <li>✓ RSVP Confirmation</li>
+        <li>✓ Unlimited Views</li>
+        <li>✓ Fast Delivery</li>
       </ul>
-      <button onclick="selectPackage('Website Invitation + Smart RSVP', 2499)" class="btn-primary w-full mt-8 py-3 font-medium">Order Website Invitation</button>
+      <button onclick="selectPackage('Regular Smart RSVP',899)" class="btn-primary w-full mt-6 py-3 text-sm font-medium">Order Regular RSVP</button>
     </div>
+
+    <!-- Premium Smart RSVP -->
+    <div class="reveal glass rounded-3xl p-7 card-hover relative overflow-hidden flex flex-col ring-2 ring-[var(--champagne)]" style="transition-delay:.12s">
+      <span class="absolute top-5 right-5 bg-[var(--champagne)] text-white text-xs px-3 py-1 rounded-full uppercase tracking-wide">Popular</span>
+      <h3 class="font-display text-xl font-semibold pr-16">Premium Smart RSVP</h3>
+      <div class="mt-3 flex items-baseline gap-2">
+        <span class="text-3xl font-display font-bold text-[var(--deep-rose)]">₱1,499</span>
+        <span class="text-xs text-[var(--ink)]/50">promo price</span>
+      </div>
+      <p class="text-xs text-[var(--rose-gold)] mt-1 mb-4">Valid until August 10, 2026</p>
+      <ul class="space-y-1.5 text-sm text-[var(--ink)]/80 flex-1">
+        <li>✓ Smart RSVP Website</li>
+        <li>✓ Personalized design per your theme</li>
+        <li>✓ For Both Open &amp; Fixed Companion</li>
+        <li>✓ With Dashboard</li>
+        <li>✓ Mobile Friendly</li>
+        <li>✓ Guest Management Website</li>
+        <li>✓ RSVP Confirmation</li>
+        <li>✓ Unlimited Views</li>
+        <li>✓ Fast Delivery</li>
+      </ul>
+      <button onclick="selectPackage('Premium Smart RSVP',1499)" class="btn-primary w-full mt-6 py-3 text-sm font-medium">Order Premium RSVP</button>
+    </div>
+
+    <!-- Website Invitation + Smart RSVP -->
+    <div class="reveal glass rounded-3xl p-7 card-hover relative overflow-hidden flex flex-col" style="transition-delay:.16s">
+      <span class="absolute top-5 right-5 bg-[var(--deep-rose)] text-white text-xs px-3 py-1 rounded-full uppercase tracking-wide">Best Value</span>
+      <h3 class="font-display text-xl font-semibold pr-16">Website Invitation + Smart RSVP</h3>
+      <div class="mt-3 flex items-baseline gap-2">
+        <span class="text-3xl font-display font-bold text-[var(--deep-rose)]">₱2,499</span>
+        <span class="text-xs text-[var(--ink)]/50">promo price</span>
+      </div>
+      <p class="text-xs text-[var(--rose-gold)] mt-1 mb-4">Valid until August 10, 2026</p>
+      <ul class="space-y-1.5 text-sm text-[var(--ink)]/80 flex-1">
+        <li>✓ Premium Invitation Website</li>
+        <li>✓ Smart RSVP</li>
+        <li>✓ Countdown Timer</li>
+        <li>✓ Event Details</li>
+        <li>✓ Gallery</li>
+        <li>✓ Maps</li>
+        <li>✓ Dress Code</li>
+        <li>✓ Love Story Timeline</li>
+        <li>✓ QR Code</li>
+        <li>✓ Mobile Friendly</li>
+      </ul>
+      <button onclick="selectPackage('Website Invitation + Smart RSVP',2499)" class="btn-primary w-full mt-6 py-3 text-sm font-medium">Order Website Invitation</button>
+    </div>
+
   </div>
 </section>
 
@@ -182,34 +211,58 @@ input[type=radio],input[type=checkbox]{accent-color:var(--deep-rose);}
     <p class="uppercase tracking-[0.25em] text-sm text-[var(--rose-gold)] font-medium">Every Occasion</p>
     <h2 class="font-display text-4xl md:text-5xl font-semibold mt-3">Events We Cater</h2>
   </div>
-  <div class="max-w-6xl mx-auto mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
-    <!-- icon cards generated via inline svg -->
-  </div>
-  <div id="eventsGrid" class="max-w-6xl mx-auto mt-0 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5"></div>
+  <div id="eventsGrid" class="max-w-6xl mx-auto mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5"></div>
 </section>
 
-<!-- SAMPLE RSVP -->
+<!-- PORTFOLIO / SAMPLE RSVP -->
 <section id="samples" class="py-24 px-6 fade-section">
   <div class="max-w-7xl mx-auto text-center reveal">
     <p class="uppercase tracking-[0.25em] text-sm text-[var(--rose-gold)] font-medium">Portfolio</p>
-    <h2 class="font-display text-4xl md:text-5xl font-semibold mt-3">Sample RSVP Designs</h2>
+    <h2 class="font-display text-4xl md:text-5xl font-semibold mt-3">Watch Our Sample Designs</h2>
+    <p class="mt-3 text-[var(--ink)]/60">Real RSVP &amp; Invitation websites we've built for our clients</p>
   </div>
-  <div class="max-w-6xl mx-auto mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-    <div class="reveal rounded-2xl overflow-hidden shadow-xl card-hover bg-white/50">
-      <img src="https://placehold.co/400x520/7E2F47/F7E1E5?font=playfair-display&text=Wedding+RSVP" class="w-full h-64 object-cover">
-      <p class="p-4 font-display text-center">Wedding RSVP</p>
+
+  <!-- Wedding RSVP -->
+  <div class="max-w-6xl mx-auto mt-14">
+    <p class="font-display text-xl font-semibold mb-5 text-center text-[var(--deep-rose)]">💍 Wedding RSVP</p>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div class="reveal glass rounded-2xl overflow-hidden card-hover">
+        <div class="tiktok-wrap" style="height:560px;">
+          <iframe src="https://www.tiktok.com/embed/v2/7649392104715717895" height="560" allowfullscreen allow="encrypted-media" loading="lazy"></iframe>
+        </div>
+      </div>
+      <div class="reveal glass rounded-2xl overflow-hidden card-hover" style="transition-delay:.08s">
+        <div class="tiktok-wrap" style="height:560px;">
+          <iframe src="https://www.tiktok.com/embed/v2/7657215627610197255" height="560" allowfullscreen allow="encrypted-media" loading="lazy"></iframe>
+        </div>
+      </div>
     </div>
-    <div class="reveal rounded-2xl overflow-hidden shadow-xl card-hover bg-white/50" style="transition-delay:.05s">
-      <img src="https://placehold.co/400x520/B76E79/FFF8F4?font=playfair-display&text=Birthday+RSVP" class="w-full h-64 object-cover">
-      <p class="p-4 font-display text-center">Birthday RSVP</p>
+  </div>
+
+  <!-- Debut / Birthday -->
+  <div class="max-w-6xl mx-auto mt-12">
+    <p class="font-display text-xl font-semibold mb-5 text-center text-[var(--deep-rose)]">👑 Debut / Birthday RSVP</p>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div class="reveal glass rounded-2xl overflow-hidden card-hover">
+        <div class="tiktok-wrap" style="height:560px;">
+          <iframe src="https://www.tiktok.com/embed/v2/7669275962273582357" height="560" allowfullscreen allow="encrypted-media" loading="lazy"></iframe>
+        </div>
+      </div>
+      <div class="reveal glass rounded-2xl overflow-hidden card-hover" style="transition-delay:.08s">
+        <div class="tiktok-wrap" style="height:560px;">
+          <iframe src="https://www.tiktok.com/embed/v2/7669455950218104084" height="560" allowfullscreen allow="encrypted-media" loading="lazy"></iframe>
+        </div>
+      </div>
     </div>
-    <div class="reveal rounded-2xl overflow-hidden shadow-xl card-hover bg-white/50" style="transition-delay:.1s">
-      <img src="https://placehold.co/400x520/D4AF7A/3A2E32?font=playfair-display&text=Corporate+RSVP" class="w-full h-64 object-cover">
-      <p class="p-4 font-display text-center">Corporate RSVP</p>
-    </div>
-    <div class="reveal rounded-2xl overflow-hidden shadow-xl card-hover bg-white/50" style="transition-delay:.15s">
-      <img src="https://placehold.co/400x520/3A2E32/F7E1E5?font=playfair-display&text=Website+Invitation" class="w-full h-64 object-cover">
-      <p class="p-4 font-display text-center">Website Invitation</p>
+  </div>
+
+  <!-- Website -->
+  <div class="max-w-3xl mx-auto mt-12">
+    <p class="font-display text-xl font-semibold mb-5 text-center text-[var(--deep-rose)]">🌐 Wedding Website Invitation</p>
+    <div class="reveal glass rounded-2xl overflow-hidden card-hover">
+      <div class="tiktok-wrap" style="height:560px;">
+        <iframe src="https://www.tiktok.com/embed/v2/7645331269982686472" height="560" allowfullscreen allow="encrypted-media" loading="lazy"></iframe>
+      </div>
     </div>
   </div>
 </section>
@@ -220,9 +273,31 @@ input[type=radio],input[type=checkbox]{accent-color:var(--deep-rose);}
     <p class="uppercase tracking-[0.25em] text-sm text-[var(--rose-gold)] font-medium">Simple Process</p>
     <h2 class="font-display text-4xl md:text-5xl font-semibold mt-3">How It Works</h2>
   </div>
-  <div class="max-w-4xl mx-auto mt-14 relative">
-    <div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-[var(--rose-gold)]/40 md:-translate-x-1/2"></div>
-    <div id="howItWorks" class="space-y-10"></div>
+  <div class="max-w-5xl mx-auto mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="reveal glass rounded-2xl p-6 card-hover flex gap-4 items-start">
+      <div class="hiw-num shrink-0">1</div>
+      <div><p class="font-display font-semibold text-lg">Choose your Event</p><p class="text-sm text-[var(--ink)]/70 mt-1">Select the type of celebration — wedding, birthday, debut, corporate, and more.</p></div>
+    </div>
+    <div class="reveal glass rounded-2xl p-6 card-hover flex gap-4 items-start" style="transition-delay:.05s">
+      <div class="hiw-num shrink-0">2</div>
+      <div><p class="font-display font-semibold text-lg">Choose your Package</p><p class="text-sm text-[var(--ink)]/70 mt-1">Pick from Sponsors Invitation, Regular RSVP, Premium RSVP, or Full Website Invitation.</p></div>
+    </div>
+    <div class="reveal glass rounded-2xl p-6 card-hover flex gap-4 items-start" style="transition-delay:.10s">
+      <div class="hiw-num shrink-0">3</div>
+      <div><p class="font-display font-semibold text-lg">Pay Online</p><p class="text-sm text-[var(--ink)]/70 mt-1">Securely pay via GCash and upload your receipt as confirmation.</p></div>
+    </div>
+    <div class="reveal glass rounded-2xl p-6 card-hover flex gap-4 items-start" style="transition-delay:.15s">
+      <div class="hiw-num shrink-0">4</div>
+      <div><p class="font-display font-semibold text-lg">Fill Up Event Details</p><p class="text-sm text-[var(--ink)]/70 mt-1">Share your theme, color palette, names, dates, and any special notes.</p></div>
+    </div>
+    <div class="reveal glass rounded-2xl p-6 card-hover flex gap-4 items-start" style="transition-delay:.20s">
+      <div class="hiw-num shrink-0">5</div>
+      <div><p class="font-display font-semibold text-lg">We Create Your RSVP</p><p class="text-sm text-[var(--ink)]/70 mt-1">Our team designs a personalized, elegant invitation tailored to your style.</p></div>
+    </div>
+    <div class="reveal glass rounded-2xl p-6 card-hover flex gap-4 items-start" style="transition-delay:.25s">
+      <div class="hiw-num shrink-0">6</div>
+      <div><p class="font-display font-semibold text-lg">Receive Your Invitation</p><p class="text-sm text-[var(--ink)]/70 mt-1">Get your finished invitation link via email, ready to share with your guests!</p></div>
+    </div>
   </div>
 </section>
 
@@ -233,12 +308,13 @@ input[type=radio],input[type=checkbox]{accent-color:var(--deep-rose);}
     <h2 class="font-display text-4xl md:text-5xl font-semibold mt-3">Place Your Order</h2>
   </div>
 
-  <div class="max-w-3xl mx-auto mt-10 flex justify-between text-xs sm:text-sm">
-    <div class="flex-1 text-center" id="indicator1"><div class="w-9 h-9 mx-auto rounded-full flex items-center justify-center font-medium step-active">1</div><p class="mt-2">Event</p></div>
-    <div class="flex-1 text-center" id="indicator2"><div class="w-9 h-9 mx-auto rounded-full flex items-center justify-center font-medium bg-white/60">2</div><p class="mt-2">Package</p></div>
-    <div class="flex-1 text-center" id="indicator3"><div class="w-9 h-9 mx-auto rounded-full flex items-center justify-center font-medium bg-white/60">3</div><p class="mt-2">RSVP</p></div>
-    <div class="flex-1 text-center" id="indicator4"><div class="w-9 h-9 mx-auto rounded-full flex items-center justify-center font-medium bg-white/60">4</div><p class="mt-2">Payment</p></div>
-    <div class="flex-1 text-center" id="indicator5"><div class="w-9 h-9 mx-auto rounded-full flex items-center justify-center font-medium bg-white/60">5</div><p class="mt-2">Details</p></div>
+  <!-- Step indicators -->
+  <div class="max-w-3xl mx-auto mt-10 flex justify-between text-xs sm:text-sm px-2">
+    <div class="flex-1 text-center" id="indicator1"><div class="w-9 h-9 mx-auto rounded-full flex items-center justify-center font-medium step-active text-white">1</div><p class="mt-2 hidden sm:block">Event</p></div>
+    <div class="flex-1 text-center" id="indicator2"><div class="w-9 h-9 mx-auto rounded-full flex items-center justify-center font-medium bg-white/60">2</div><p class="mt-2 hidden sm:block">Package</p></div>
+    <div class="flex-1 text-center" id="indicator3"><div class="w-9 h-9 mx-auto rounded-full flex items-center justify-center font-medium bg-white/60">3</div><p class="mt-2 hidden sm:block">RSVP</p></div>
+    <div class="flex-1 text-center" id="indicator4"><div class="w-9 h-9 mx-auto rounded-full flex items-center justify-center font-medium bg-white/60">4</div><p class="mt-2 hidden sm:block">Payment</p></div>
+    <div class="flex-1 text-center" id="indicator5"><div class="w-9 h-9 mx-auto rounded-full flex items-center justify-center font-medium bg-white/60">5</div><p class="mt-2 hidden sm:block">Details</p></div>
   </div>
 
   <form id="orderForm" class="max-w-3xl mx-auto mt-12 glass rounded-3xl p-6 sm:p-10 reveal">
@@ -247,11 +323,14 @@ input[type=radio],input[type=checkbox]{accent-color:var(--deep-rose);}
     <div class="step-panel" id="panel1">
       <h3 class="font-display text-2xl font-semibold mb-1">Choose Event</h3>
       <p class="text-sm text-[var(--ink)]/60 mb-6">What are you celebrating?</p>
-      <select id="eventType" required class="w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--rose-gold)]">
+      <select id="eventType" required class="field">
         <option value="">Select an event</option>
         <option value="Wedding">Wedding</option>
         <option value="Birthday">Birthday</option>
+        <option value="Debut">Debut</option>
         <option value="Corporate Event">Corporate Event</option>
+        <option value="Christening / Baptism">Christening / Baptism</option>
+        <option value="Anniversary">Anniversary</option>
         <option value="Other Event">Other Event</option>
       </select>
       <div class="mt-8 flex justify-end"><button type="button" onclick="goStep(2)" class="btn-primary px-8 py-3 font-medium">Next</button></div>
@@ -261,45 +340,42 @@ input[type=radio],input[type=checkbox]{accent-color:var(--deep-rose);}
     <div class="step-panel hidden" id="panel2">
       <h3 class="font-display text-2xl font-semibold mb-1">Choose Package</h3>
       <p class="text-sm text-[var(--ink)]/60 mb-6">Pick the option that fits your celebration.</p>
-      <div class="space-y-4">
+      <div class="space-y-3">
         <label class="flex items-center gap-3 p-4 rounded-xl border border-[var(--rose-gold)]/30 bg-white/60 cursor-pointer hover:bg-white/90 transition">
-          <input type="radio" name="package" value="Smart RSVP" data-price="799" onchange="updatePrice()">
-          <span class="font-medium">Smart RSVP — ₱799</span>
+          <input type="radio" name="package" value="Sponsors Invitation" data-price="699" onchange="onPackageChange()">
+          <div><p class="font-medium">Sponsors Invitation — <span class="text-[var(--deep-rose)]">₱699</span></p><p class="text-xs text-[var(--ink)]/50 mt-0.5">Smart Sponsors Invitation Website with Dashboard</p></div>
         </label>
         <label class="flex items-center gap-3 p-4 rounded-xl border border-[var(--rose-gold)]/30 bg-white/60 cursor-pointer hover:bg-white/90 transition">
-          <input type="radio" name="package" value="Website Invitation + Smart RSVP" data-price="2499" onchange="updatePrice()">
-          <span class="font-medium">Website Invitation + Smart RSVP — ₱2,499</span>
+          <input type="radio" name="package" value="Regular Smart RSVP" data-price="899" onchange="onPackageChange()">
+          <div><p class="font-medium">Regular Smart RSVP — <span class="text-[var(--deep-rose)]">₱899</span></p><p class="text-xs text-[var(--ink)]/50 mt-0.5">Open or Fixed Companion · Sheets Guest Management</p></div>
+        </label>
+        <label class="flex items-center gap-3 p-4 rounded-xl border border-[var(--rose-gold)]/30 bg-white/60 cursor-pointer hover:bg-white/90 transition ring-1 ring-[var(--champagne)]">
+          <input type="radio" name="package" value="Premium Smart RSVP" data-price="1499" onchange="onPackageChange()">
+          <div><p class="font-medium">Premium Smart RSVP — <span class="text-[var(--deep-rose)]">₱1,499</span></p><p class="text-xs text-[var(--ink)]/50 mt-0.5">Open &amp; Fixed Companion · Dashboard · Guest Management Website</p></div>
+        </label>
+        <label class="flex items-center gap-3 p-4 rounded-xl border border-[var(--rose-gold)]/30 bg-white/60 cursor-pointer hover:bg-white/90 transition">
+          <input type="radio" name="package" value="Website Invitation + Smart RSVP" data-price="2499" onchange="onPackageChange()">
+          <div><p class="font-medium">Website Invitation + Smart RSVP — <span class="text-[var(--deep-rose)]">₱2,499</span></p><p class="text-xs text-[var(--ink)]/50 mt-0.5">Full Premium Invitation Website + Smart RSVP</p></div>
         </label>
       </div>
-      <div class="mt-8 flex justify-between"><button type="button" onclick="goStep(1)" class="btn-outline px-8 py-3 font-medium">Back</button><button type="button" onclick="validateStep2()" class="btn-primary px-8 py-3 font-medium">Next</button></div>
+      <div class="mt-8 flex justify-between">
+        <button type="button" onclick="goStep(1)" class="btn-outline px-8 py-3 font-medium">Back</button>
+        <button type="button" onclick="validateStep2()" class="btn-primary px-8 py-3 font-medium">Next</button>
+      </div>
     </div>
 
     <!-- STEP 3: RSVP Version -->
     <div class="step-panel hidden" id="panel3">
       <h3 class="font-display text-2xl font-semibold mb-1">Choose RSVP Version</h3>
-      <p class="text-sm text-[var(--ink)]/60 mb-6">Up to 10 companions per guest.</p>
-      <div class="space-y-3 mb-6">
-        <label class="flex items-center gap-3 p-4 rounded-xl border border-[var(--rose-gold)]/30 bg-white/60 cursor-pointer">
-          <input type="radio" name="rsvpVersion" value="Version 1 (Companion Count)" onchange="toggleRsvpVersion()">
-          <span class="font-medium">Version 1 — Main Guest Name + Companion Count <span class="text-[var(--ink)]/50">(e.g. John Santos, 4)</span></span>
-        </label>
-        <label class="flex items-center gap-3 p-4 rounded-xl border border-[var(--rose-gold)]/30 bg-white/60 cursor-pointer">
-          <input type="radio" name="rsvpVersion" value="Version 2 (Companion Names)" onchange="toggleRsvpVersion()">
-          <span class="font-medium">Version 2 — Main Guest Name + Companion Names <span class="text-[var(--ink)]/50">(up to 10 names)</span></span>
-        </label>
+      <p class="text-sm text-[var(--ink)]/60 mb-6">Select how your guests will RSVP.</p>
+      <div id="rsvpOptions" class="space-y-3 mb-2"></div>
+      <div id="premiumUpgradeNote" class="hidden mt-3 p-3 rounded-xl bg-[var(--blush)] text-sm text-[var(--deep-rose)]">
+        💡 <strong>Premium Version</strong> adds ₱300 to your total — includes both Open and Fixed companion.
       </div>
-
-      <div id="v1Fields" class="hidden space-y-3">
-        <input type="text" id="mainGuestV1" placeholder="Main Guest Name (e.g. John Santos)" class="w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">
-        <input type="number" id="companionCountV1" min="0" max="10" placeholder="Companion Count (max 10)" class="w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">
+      <div class="mt-8 flex justify-between">
+        <button type="button" onclick="goStep(2)" class="btn-outline px-8 py-3 font-medium">Back</button>
+        <button type="button" onclick="validateStep3()" class="btn-primary px-8 py-3 font-medium">Next</button>
       </div>
-
-      <div id="v2Fields" class="hidden space-y-3">
-        <input type="text" id="mainGuestV2" placeholder="Main Guest Name (e.g. John Santos)" class="w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">
-        <div id="companionNamesWrap" class="grid sm:grid-cols-2 gap-3"></div>
-      </div>
-
-      <div class="mt-8 flex justify-between"><button type="button" onclick="goStep(2)" class="btn-outline px-8 py-3 font-medium">Back</button><button type="button" onclick="goStep(4)" class="btn-primary px-8 py-3 font-medium">Next</button></div>
     </div>
 
     <!-- STEP 4: Payment -->
@@ -307,7 +383,8 @@ input[type=radio],input[type=checkbox]{accent-color:var(--deep-rose);}
       <h3 class="font-display text-2xl font-semibold mb-1">Payment</h3>
       <p class="text-sm text-[var(--ink)]/60 mb-6">Scan the QR code or pay manually via GCash.</p>
 
-      <div id="priceCard" class="rounded-2xl p-6 bg-gradient-to-br from-[var(--blush)] to-white border border-[var(--rose-gold)]/30 mb-6">
+      <div class="rounded-2xl p-6 bg-gradient-to-br from-[var(--blush)] to-white border border-[var(--rose-gold)]/30 mb-6">
+        <div class="flex justify-between text-sm mb-1"><span>Package</span><span id="sumPackage" class="font-medium">—</span></div>
         <div class="flex justify-between text-sm mb-1"><span>Subtotal</span><span id="sumSubtotal">₱0</span></div>
         <div class="flex justify-between text-sm mb-1 text-[var(--rose-gold)]"><span>Promo Applied</span><span id="sumPromo">—</span></div>
         <div class="fancy-divider my-3"></div>
@@ -316,35 +393,57 @@ input[type=radio],input[type=checkbox]{accent-color:var(--deep-rose);}
 
       <div class="grid sm:grid-cols-2 gap-6 items-start">
         <div class="text-center">
-          <img src="https://placehold.co/260x260/FFFFFF/3A2E32?text=GCash+QR" class="mx-auto rounded-2xl border border-[var(--rose-gold)]/40 shadow">
+          <img src="https://ik.imagekit.io/ainmsoyhi/Nexcellent%20Solutions/Love,%20Anne%20Gcash%20QR%20Code.jpg" alt="GCash QR Code" class="mx-auto rounded-2xl border border-[var(--rose-gold)]/40 shadow max-w-[220px] w-full">
           <p class="text-xs mt-2 text-[var(--ink)]/60">Scan to pay via GCash</p>
         </div>
         <div class="space-y-2 text-sm">
-          <p class="font-medium">Manual Payment</p>
+          <p class="font-medium text-base">Manual Payment</p>
           <p>GCash Number: <span class="font-semibold">09566134289</span></p>
           <p>Account Name: <span class="font-semibold">GR**E AN*E C.</span></p>
+          <p class="text-xs text-[var(--ink)]/50 mt-2">After paying, tick the checkbox below and upload your receipt to proceed.</p>
         </div>
       </div>
 
-      <label class="flex items-center gap-2 mt-6 text-sm"><input type="checkbox" id="paidCheck" required> I have completed my payment.</label>
+      <label class="flex items-center gap-2 mt-6 text-sm cursor-pointer">
+        <input type="checkbox" id="paidCheck"> 
+        <span>I have completed my payment.</span>
+      </label>
 
       <div class="mt-4">
-        <label class="block text-sm mb-2">Upload Receipt</label>
+        <label class="block text-sm mb-2 font-medium">Upload Receipt</label>
         <input type="file" id="receiptUpload" accept="image/*" class="w-full text-sm rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">
         <img id="receiptPreview" class="hidden mt-3 rounded-xl max-h-48 border border-[var(--rose-gold)]/30">
       </div>
 
-      <div class="mt-8 flex justify-between"><button type="button" onclick="goStep(3)" class="btn-outline px-8 py-3 font-medium">Back</button><button type="button" onclick="validateStep4()" class="btn-primary px-8 py-3 font-medium">Next</button></div>
+      <div class="mt-8 flex justify-between">
+        <button type="button" id="payBackBtn" onclick="payBack()" class="btn-outline px-8 py-3 font-medium">Back</button>
+        <button type="button" onclick="validateStep4()" class="btn-primary px-8 py-3 font-medium">Next</button>
+      </div>
     </div>
 
-    <!-- STEP 5: Event details (dynamic) -->
+    <!-- STEP 5: Event Details -->
     <div class="step-panel hidden" id="panel5">
       <h3 class="font-display text-2xl font-semibold mb-1">Event Information</h3>
       <p class="text-sm text-[var(--ink)]/60 mb-6">Tell us about your celebration.</p>
-      <div id="dynamicFields" class="space-y-3"></div>
-      <textarea id="additionalNotes" rows="3" placeholder="Additional Notes" class="w-full mt-3 rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3"></textarea>
-      <div class="mt-8 flex justify-between"><button type="button" onclick="goStep(4)" class="btn-outline px-8 py-3 font-medium">Back</button>
-        <button type="submit" class="btn-primary px-8 py-3 font-medium">Submit Order</button></div>
+      <div class="space-y-3">
+        <input id="f_theme" type="text" placeholder="Event Theme" class="field">
+        <input id="f_palette" type="text" placeholder="Event Color Palette" class="field">
+        <div class="grid sm:grid-cols-2 gap-3">
+          <input id="f_bride" type="text" placeholder="Bride Name" class="field">
+          <input id="f_groom" type="text" placeholder="Groom Name" class="field">
+        </div>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <input id="f_eventdate" type="text" placeholder="Event Date (e.g. December 20, 2026)" class="field">
+          <input id="f_rsvpdeadline" type="text" placeholder="RSVP Deadline Date" class="field">
+        </div>
+        <input id="f_email" type="email" required placeholder="Email Address (for sending your file)" class="field">
+        <textarea id="additionalNotes" rows="3" placeholder="Additional Notes (e.g. Canva link for motif, special requests)" class="field resize-none"></textarea>
+      </div>
+      <p class="mt-4 text-xs text-[var(--rose-gold)] italic">For any questions, revisions, or concerns, please feel free to message Love, Anne on Facebook or TikTok. 💕</p>
+      <div class="mt-8 flex justify-between">
+        <button type="button" onclick="goStep(4)" class="btn-outline px-8 py-3 font-medium">Back</button>
+        <button type="submit" class="btn-primary px-8 py-3 font-medium">Submit Order</button>
+      </div>
     </div>
 
   </form>
@@ -352,10 +451,12 @@ input[type=radio],input[type=checkbox]{accent-color:var(--deep-rose);}
 
 <!-- SUCCESS MODAL -->
 <div id="successModal" class="hidden fixed inset-0 z-50 bg-[var(--ink)]/50 backdrop-blur-sm flex items-center justify-center px-6">
-  <div class="glass rounded-3xl p-10 max-w-md text-center relative">
-    <div class="seal show mx-auto mb-4"><span class="text-white font-display text-xl">A&amp;L</span></div>
+  <div class="glass rounded-3xl p-10 max-w-md w-full text-center">
+    <div style="width:72px;height:72px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#E3B679,var(--rose-gold) 55%,var(--deep-rose) 100%);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;" >
+      <span class="text-white font-display text-xl">A&amp;L</span>
+    </div>
     <h3 class="font-display text-3xl font-semibold mb-2">Order Received!</h3>
-    <p class="text-sm text-[var(--ink)]/70">Thank you for choosing Love, Anne. We've received your order and will email your finished invitation soon.</p>
+    <p class="text-sm text-[var(--ink)]/70">Thank you for choosing Love, Anne. We've received your order details and will reach out soon. 💕</p>
     <button onclick="closeModal()" class="btn-primary mt-6 px-8 py-3 font-medium">Close</button>
   </div>
 </div>
@@ -369,11 +470,15 @@ input[type=radio],input[type=checkbox]{accent-color:var(--deep-rose);}
   <div id="whyGrid" class="max-w-6xl mx-auto mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5"></div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- TESTIMONIALS / REVIEWS -->
 <section class="py-24 px-6 fade-section">
   <div class="max-w-7xl mx-auto text-center reveal">
     <p class="uppercase tracking-[0.25em] text-sm text-[var(--rose-gold)] font-medium">Kind Words</p>
     <h2 class="font-display text-4xl md:text-5xl font-semibold mt-3">Loved By Our Clients</h2>
+    <p class="mt-3 text-sm text-[var(--ink)]/60">
+      See more reviews on our 
+      <a href="https://www.facebook.com/LoveAnnePH/reviews/" target="_blank" class="text-[var(--deep-rose)] underline underline-offset-2 hover:opacity-80">Facebook Page</a>
+    </p>
   </div>
   <div id="testimonialGrid" class="max-w-6xl mx-auto mt-12 grid md:grid-cols-3 gap-6"></div>
 </section>
@@ -393,9 +498,18 @@ input[type=radio],input[type=checkbox]{accent-color:var(--deep-rose);}
     <p class="font-script text-4xl text-[var(--deep-rose)] mb-2">Love, Anne</p>
     <p class="text-[var(--ink)]/70">Smart RSVP &amp; Digital Invitation Services</p>
     <div class="flex justify-center gap-6 mt-8">
-      <a href="https://www.tiktok.com/@loveanne.ph" target="_blank" class="glass w-14 h-14 rounded-full flex items-center justify-center text-xl card-hover">🎵</a>
-      <a href="https://web.facebook.com/LoveAnnePH" target="_blank" class="glass w-14 h-14 rounded-full flex items-center justify-center text-xl card-hover">📘</a>
-      <a href="mailto:loveanneofficial@gmail.com" class="glass w-14 h-14 rounded-full flex items-center justify-center text-xl card-hover">✉️</a>
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@loveanne.ph" target="_blank" class="glass w-14 h-14 rounded-full flex items-center justify-center card-hover" title="TikTok">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" class="text-[var(--deep-rose)]"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+      </a>
+      <!-- Facebook -->
+      <a href="https://web.facebook.com/LoveAnnePH" target="_blank" class="glass w-14 h-14 rounded-full flex items-center justify-center card-hover" title="Facebook">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" class="text-[var(--deep-rose)]"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+      </a>
+      <!-- Email -->
+      <a href="mailto:loveanneofficial@gmail.com" class="glass w-14 h-14 rounded-full flex items-center justify-center card-hover" title="Email">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[var(--deep-rose)]"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+      </a>
     </div>
   </div>
 </section>
@@ -420,10 +534,14 @@ input[type=radio],input[type=checkbox]{accent-color:var(--deep-rose);}
     </div>
     <div>
       <p class="uppercase text-sm tracking-wider mb-3 text-[var(--champagne)]">Connect</p>
-      <div class="flex gap-4 text-sm text-white/80">
-        <a href="https://www.tiktok.com/@loveanne.ph" target="_blank" class="hover:text-white">TikTok</a>
-        <a href="https://web.facebook.com/LoveAnnePH" target="_blank" class="hover:text-white">Facebook</a>
-        <a href="mailto:loveanneofficial@gmail.com" class="hover:text-white">Email</a>
+      <div class="flex gap-5 items-center mt-1">
+        <a href="https://www.tiktok.com/@loveanne.ph" target="_blank" class="hover:opacity-80" title="TikTok">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+        </a>
+        <a href="https://web.facebook.com/LoveAnnePH" target="_blank" class="hover:opacity-80" title="Facebook">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+        </a>
+        <a href="mailto:loveanneofficial@gmail.com" class="hover:opacity-80 text-sm text-white/80">loveanneofficial@gmail.com</a>
       </div>
     </div>
   </div>
@@ -433,26 +551,24 @@ input[type=radio],input[type=checkbox]{accent-color:var(--deep-rose);}
 </footer>
 
 <!-- FLOATING ORDER BUTTON -->
-<a href="#order" id="floatOrder" class="fixed bottom-6 right-6 z-40 btn-primary px-6 py-3.5 font-medium shadow-2xl hidden sm:flex items-center gap-2">💌 Order Now</a>
+<a href="#order" id="floatOrder" class="fixed bottom-6 right-6 z-40 btn-primary px-6 py-3.5 font-medium shadow-2xl flex items-center gap-2">💌 Order Now</a>
 
-<!-- EmailJS (set your own public key / service / template IDs before going live) -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
 // ---------- CONFIG ----------
 if (window.emailjs) {
-  try { emailjs.init("EG-R78daj0fSOLXqp"); } catch (err) { console.error('EmailJS init failed:', err); }
+  try { emailjs.init("EG-R78daj0fSOLXqp"); } catch(err){ console.error('EmailJS init failed:', err); }
 } else {
-  console.warn('EmailJS library did not load — check network/CDN access.');
+  console.warn('EmailJS not loaded.');
 }
-const EMAILJS_SERVICE_ID = "service_uueut7j";
+const EMAILJS_SERVICE_ID  = "service_uueut7j";
 const EMAILJS_TEMPLATE_ID = "template_bk1jrns";
-const PROMO_DEADLINE = new Date("2026-07-03T23:59:59+08:00");
+const PROMO_DEADLINE = new Date("2026-08-10T23:59:59+08:00");
 
 // ---------- NAV ----------
 const nav = document.getElementById('mainNav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 30);
-  document.getElementById('floatOrder').classList.toggle('hidden', window.scrollY < 400 ? false : false);
 });
 document.getElementById('menuBtn').addEventListener('click', () => {
   document.getElementById('mobileMenu').classList.toggle('hidden');
@@ -461,10 +577,9 @@ document.querySelectorAll('#mobileMenu a').forEach(a => a.addEventListener('clic
   document.getElementById('mobileMenu').classList.add('hidden');
 }));
 
-// ---------- DYNAMIC CONTENT (each block isolated so one error can't block the rest) ----------
-
+// ---------- DYNAMIC SECTIONS (each isolated) ----------
 function safeRun(label, fn){
-  try { fn(); } catch (err) { console.error('Error rendering ' + label + ':', err); }
+  try { fn(); } catch(err){ console.error('Error in ' + label + ':', err); }
 }
 
 safeRun('Events We Cater', () => {
@@ -480,126 +595,195 @@ safeRun('Events We Cater', () => {
     </div>`).join('');
 });
 
-safeRun('How It Works', () => {
-  const steps = [
-    ['1','Choose your Event'], ['2','Choose your Package'], ['3','Pay Online'],
-    ['4','Fill Up Event Details'], ['5','We Create Your RSVP'], ['6','Receive Your Finished Invitation']
-  ];
-  document.getElementById('howItWorks').innerHTML = steps.map((s,i) => `
-    <div class="reveal relative flex items-start gap-6 md:justify-${i%2===0?'start':'end'} md:flex-row${i%2===1?'-reverse':''}" style="transition-delay:${i*0.06}s">
-      <div class="w-12 h-12 shrink-0 rounded-full btn-primary flex items-center justify-center font-display font-semibold z-10">${s[0]}</div>
-      <div class="glass rounded-2xl p-5 max-w-sm"><p class="font-display text-lg">${s[1]}</p></div>
-    </div>`).join('');
-});
-
 safeRun('Why Choose Us', () => {
-  const why = ['Elegant Designs','Fast Turnaround','Affordable Packages','Unlimited Support','Mobile Friendly','Premium Quality','Trusted Service','Easy RSVP','Modern Invitation Website'];
+  const why = [
+    ['💎','Elegant Designs'], ['⚡','Fast Turnaround'], ['💰','Affordable Packages'],
+    ['🤝','Unlimited Support'], ['📱','Mobile Friendly'], ['🏆','Premium Quality'],
+    ['❤️','Trusted Service'], ['✅','Easy RSVP'], ['🌐','Modern Website']
+  ];
   document.getElementById('whyGrid').innerHTML = why.map((w,i) => `
     <div class="reveal glass rounded-2xl p-5 text-center card-hover" style="transition-delay:${(i%5)*0.05}s">
-      <p class="font-display font-medium text-sm">${w}</p>
+      <div class="text-2xl mb-2">${w[0]}</div>
+      <p class="font-display font-medium text-sm">${w[1]}</p>
     </div>`).join('');
 });
 
 safeRun('Testimonials', () => {
-  const testimonials = [
-    ['Andrea & Miguel','Wedding Client','Our guests said the RSVP felt like a real invitation card. Everything was seamless on the big day.'],
-    ['Mommy Liz','Birthday Client',"Booking the venue list and tracking RSVPs for my daughter's 18th was so much easier this way."],
-    ['Coastal Realty Corp.','Corporate Client','Clean, professional, and our attendees actually used it. Exactly what we needed for our anniversary gala.']
+  const reviews = [
+    { name: 'Charize M.', type: 'Wedding Client', stars: 5, text: 'Ang ganda ng RSVP namin! Lahat ng guests namin ay super amazed. Worth it talaga ang every peso. Highly recommended!' },
+    { name: 'Mommy Liz', type: 'Debut Client', stars: 5, text: "Booking and tracking RSVPs for my daughter's 18th was so much easier. The design was exactly what we wanted. 10/10!" },
+    { name: 'Ate Joan', type: 'Wedding Client', stars: 5, text: 'Super responsive and maasikaso si Love, Anne! Nabigyan kami ng magandang design na naaayon sa theme namin. Salamat!' },
+    { name: 'HR Department', type: 'Corporate Client', stars: 5, text: 'Clean, professional, and our attendees actually used it. Exactly what we needed for our company anniversary event.' },
+    { name: 'Andrea & Miguel', type: 'Wedding Client', stars: 5, text: 'Our guests said the RSVP felt like a real luxury invitation. Everything was seamless on the big day. Thank you, Love Anne!' },
+    { name: 'Princess Reyes', type: 'Birthday Client', stars: 5, text: 'Grabe ang husay ng work! On time pa ang delivery. Ang daming compliments na natanggap namin dahil sa RSVP. Love it!' }
   ];
-  document.getElementById('testimonialGrid').innerHTML = testimonials.map((t,i) => `
-    <div class="reveal glass rounded-2xl p-6 card-hover" style="transition-delay:${i*0.08}s">
-      <p class="text-[var(--champagne)] text-lg mb-2">★★★★★</p>
-      <p class="text-sm text-[var(--ink)]/80 italic">"${t[2]}"</p>
-      <p class="mt-4 font-display font-medium">${t[0]}</p>
-      <p class="text-xs text-[var(--ink)]/50">${t[1]}</p>
+  document.getElementById('testimonialGrid').innerHTML = reviews.map((r,i) => `
+    <div class="reveal glass rounded-2xl p-6 card-hover" style="transition-delay:${i*0.07}s">
+      <div class="flex items-center gap-2 mb-3">
+        <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(120deg,var(--deep-rose),var(--rose-gold));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;">${r.name[0]}</div>
+        <div>
+          <p class="font-medium text-sm leading-tight">${r.name}</p>
+          <p class="text-xs text-[var(--ink)]/50">${r.type}</p>
+        </div>
+        <div class="ml-auto flex gap-0.5">
+          ${Array.from({length:r.stars}).map(()=>'<svg width="14" height="14" viewBox="0 0 20 20" fill="#D4AF7A"><path d="M10 1l2.93 6.27L20 8.18l-5 4.87 1.18 6.88L10 16.77l-6.18 3.16L5 13.05 0 8.18l7.07-1.91z"/></svg>').join('')}
+        </div>
+      </div>
+      <p class="text-sm text-[var(--ink)]/80 italic leading-relaxed">"${r.text}"</p>
+      <div class="flex items-center gap-1.5 mt-3">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+        <span class="text-xs text-[var(--ink)]/40">Facebook Review</span>
+      </div>
     </div>`).join('');
 });
 
 safeRun('FAQ', () => {
   const faqs = [
-    ['How long is the turnaround?','Most Smart RSVP orders are completed within 2–3 business days; full website invitations take 4–6 business days.'],
-    ['Can I edit my invitation?','Yes, you can request revisions to text, colors, and photos after the first draft is delivered.'],
-    ['Can I request revisions?','We include free minor revisions; major redesigns may carry a small fee.'],
-    ['Can I customize colors?','Absolutely, just share your preferred palette in the order form.'],
-    ['Can I change RSVP details?','Yes, guest list edits can be made anytime by messaging our team.'],
-    ['How do guests RSVP?','Guests simply open your unique link, search their name, and confirm attendance in seconds.']
+    ['How long is the turnaround?', 'Most Smart RSVP orders are completed within 2–3 business days; full website invitations take 2–4 weeks after filling up the wedding details.'],
+    ['Can I edit my invitation?', 'Yes, you can request revisions to text, colors, and photos after the first draft is delivered.'],
+    ['Can I request revisions?', 'We include free minor revisions. Please coordinate with Love, Anne on Facebook or TikTok for any changes.'],
+    ['Can I customize colors?', 'Absolutely! Just share your preferred color palette or Canva link in the order form.'],
+    ['Can I change RSVP details?', 'Yes, guest list edits can be made anytime by messaging our team on Facebook or TikTok.'],
+    ['How do guests RSVP?', 'Guests simply open your unique link, search their name, and confirm attendance in seconds — no app download needed.'],
+    ['What is the difference between Regular and Premium RSVP?', 'Regular RSVP supports either Open (companion count) or Fixed (companion names) companion mode only. Premium RSVP supports both modes with a full Dashboard and Guest Management Website.'],
+    ['How will I receive my finished invitation?', 'Your invitation link and files will be sent to the email address you provided in the order form.']
   ];
   document.getElementById('faqList').innerHTML = faqs.map((f,i) => `
     <div class="reveal glass rounded-2xl overflow-hidden" style="transition-delay:${i*0.04}s">
-      <button class="w-full text-left px-6 py-4 flex justify-between items-center font-medium" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('span').classList.toggle('rotate-45')">
-        ${f[0]} <span class="text-[var(--deep-rose)] text-xl transition-transform">+</span>
+      <button class="w-full text-left px-6 py-4 flex justify-between items-center font-medium text-sm sm:text-base" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.faq-icon').classList.toggle('rotate-45')">
+        <span>${f[0]}</span>
+        <span class="faq-icon text-[var(--deep-rose)] text-xl transition-transform ml-4 shrink-0">+</span>
       </button>
-      <div class="hidden px-6 pb-4 text-sm text-[var(--ink)]/70">${f[1]}</div>
+      <div class="hidden px-6 pb-4 text-sm text-[var(--ink)]/70 leading-relaxed">${f[1]}</div>
     </div>`).join('');
 });
 
-// ---------- SCROLL REVEAL ----------
-// Set up AFTER all dynamic content above is injected, so newly created .reveal
-// elements (event cards, why-choose cards, testimonials, FAQ, etc.) are observed too.
+// ---------- SCROLL REVEAL (runs AFTER all content is injected) ----------
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
-}, { threshold: 0.15 });
+}, { threshold: 0.10 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-// ---------- ORDER FORM LOGIC ----------
+// ---------- ORDER FORM STATE ----------
 let currentStep = 1;
 let selectedPackagePrice = 0;
+let premiumUpgrade = false;
+
+// RSVP options per package
+const RSVP_OPTIONS = {
+  'Sponsors Invitation': null, // skip RSVP step
+  'Regular Smart RSVP': [
+    { value: 'Version 1 — Open Companion', label: 'Version 1 — Open Companion', sub: 'Guest name + number of companions' },
+    { value: 'Version 2 — Fixed Companion', label: 'Version 2 — Fixed Companion', sub: 'Guest name + companion names listed' }
+  ],
+  'Premium Smart RSVP': [
+    { value: 'Premium Version — Open and Fixed Companion', label: 'Premium Version — Open and Fixed Companion', sub: 'Supports both open and fixed companion modes' }
+  ],
+  'Website Invitation + Smart RSVP': [
+    { value: 'Version 1 — Open Companion', label: 'Version 1 — Open Companion', sub: 'Guest name + number of companions' },
+    { value: 'Version 2 — Fixed Companion', label: 'Version 2 — Fixed Companion', sub: 'Guest name + companion names listed' },
+    { value: 'Premium Version — Open and Fixed Companion (+₱300)', label: 'Premium Version — Open and Fixed Companion', sub: '+₱300 • Supports both open and fixed companion modes', premium: true }
+  ]
+};
 
 function selectPackage(name, price) {
   document.querySelectorAll('input[name=package]').forEach(r => { if (r.value === name) r.checked = true; });
-  updatePrice();
-  document.getElementById('order').scrollIntoView({behavior:'smooth'});
-  goStep(1);
+  selectedPackagePrice = price;
+  document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+  setTimeout(() => goStep(2), 400);
+}
+
+function onPackageChange() {
+  const sel = document.querySelector('input[name=package]:checked');
+  if (!sel) return;
+  selectedPackagePrice = parseInt(sel.dataset.price);
+  premiumUpgrade = false;
 }
 
 function goStep(n) {
   if (n === 2 && !document.getElementById('eventType').value) { alert('Please choose an event first.'); return; }
   document.querySelectorAll('.step-panel').forEach(p => p.classList.add('hidden'));
-  document.getElementById('panel'+n).classList.remove('hidden');
-  for (let i=1;i<=5;i++){
-    const ind = document.getElementById('indicator'+i).firstElementChild;
-    ind.classList.toggle('step-active', i<=n);
-    ind.classList.toggle('bg-white/60', i>n);
+  document.getElementById('panel' + n).classList.remove('hidden');
+  const total = premiumUpgrade ? selectedPackagePrice + 300 : selectedPackagePrice;
+  for (let i = 1; i <= 5; i++) {
+    const el = document.getElementById('indicator' + i).firstElementChild;
+    el.classList.toggle('step-active', i <= n);
+    if (i <= n) el.classList.add('text-white'); else el.classList.remove('text-white');
+    el.classList.toggle('bg-white/60', i > n);
   }
   currentStep = n;
-  if (n === 5) renderDynamicFields();
-  window.scrollTo({top: document.getElementById('order').offsetTop - 80, behavior:'smooth'});
+  if (n === 4) updatePriceDisplay();
+  window.scrollTo({ top: document.getElementById('order').offsetTop - 80, behavior: 'smooth' });
 }
 
-function validateStep2(){
-  if (!document.querySelector('input[name=package]:checked')) { alert('Please choose a package.'); return; }
-  updatePrice();
-  goStep(3);
-}
-
-function toggleRsvpVersion(){
-  const v = document.querySelector('input[name=rsvpVersion]:checked')?.value || '';
-  document.getElementById('v1Fields').classList.toggle('hidden', !v.startsWith('Version 1'));
-  document.getElementById('v2Fields').classList.toggle('hidden', !v.startsWith('Version 2'));
-  if (v.startsWith('Version 2')) buildCompanionNameFields();
-}
-
-function buildCompanionNameFields(){
-  const wrap = document.getElementById('companionNamesWrap');
-  if (wrap.children.length) return;
-  let html = '';
-  for (let i=1;i<=10;i++){
-    html += `<input type="text" placeholder="Companion ${i} Name" class="companionNameInput rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-2.5">`;
-  }
-  wrap.innerHTML = html;
-}
-
-function updatePrice(){
+function validateStep2() {
   const sel = document.querySelector('input[name=package]:checked');
-  selectedPackagePrice = sel ? parseInt(sel.dataset.price) : 0;
-  const subtotal = selectedPackagePrice;
-  document.getElementById('sumSubtotal').innerText = '₱' + subtotal.toLocaleString();
-  const promoActive = new Date() <= PROMO_DEADLINE;
-  document.getElementById('sumPromo').innerText = promoActive ? 'Applied ✓' : 'Expired';
-  document.getElementById('sumTotal').innerText = '₱' + subtotal.toLocaleString();
+  if (!sel) { alert('Please choose a package.'); return; }
+  selectedPackagePrice = parseInt(sel.dataset.price);
+  premiumUpgrade = false;
+  // Sponsors Invitation skips RSVP step
+  if (sel.value === 'Sponsors Invitation') {
+    goStep(4);
+  } else {
+    buildRsvpOptions(sel.value);
+    goStep(3);
+  }
 }
 
-document.getElementById('receiptUpload').addEventListener('change', function(e){
+function buildRsvpOptions(pkgName) {
+  const options = RSVP_OPTIONS[pkgName] || [];
+  const wrap = document.getElementById('rsvpOptions');
+  const noteEl = document.getElementById('premiumUpgradeNote');
+  wrap.innerHTML = options.map(o => `
+    <label class="flex items-start gap-3 p-4 rounded-xl border border-[var(--rose-gold)]/30 bg-white/60 cursor-pointer hover:bg-white/90 transition">
+      <input type="radio" name="rsvpVersion" value="${o.value}" class="mt-0.5" onchange="onRsvpChange(this)">
+      <div>
+        <p class="font-medium text-sm">${o.label}</p>
+        <p class="text-xs text-[var(--ink)]/50 mt-0.5">${o.sub}</p>
+      </div>
+    </label>`).join('');
+  noteEl.classList.add('hidden');
+}
+
+function onRsvpChange(radio) {
+  const noteEl = document.getElementById('premiumUpgradeNote');
+  if (radio.value.includes('+₱300')) {
+    premiumUpgrade = true;
+    noteEl.classList.remove('hidden');
+  } else {
+    premiumUpgrade = false;
+    noteEl.classList.add('hidden');
+  }
+}
+
+function validateStep3() {
+  const sel = document.querySelector('input[name=rsvpVersion]:checked');
+  if (!sel) { alert('Please choose an RSVP version.'); return; }
+  goStep(4);
+}
+
+function payBack() {
+  const pkg = document.querySelector('input[name=package]:checked');
+  if (pkg && pkg.value === 'Sponsors Invitation') {
+    goStep(2);
+  } else {
+    goStep(3);
+  }
+}
+
+function updatePriceDisplay() {
+  const sel = document.querySelector('input[name=package]:checked');
+  const pkgName = sel ? sel.value : '—';
+  const base = selectedPackagePrice || 0;
+  const total = premiumUpgrade ? base + 300 : base;
+  document.getElementById('sumPackage').innerText = pkgName;
+  document.getElementById('sumSubtotal').innerText = '₱' + base.toLocaleString();
+  const promoActive = new Date() <= PROMO_DEADLINE;
+  document.getElementById('sumPromo').innerText = promoActive ? '✓ Applied' : 'Expired';
+  document.getElementById('sumTotal').innerText = '₱' + total.toLocaleString();
+}
+
+document.getElementById('receiptUpload').addEventListener('change', function(e) {
   const file = e.target.files[0];
   if (!file) return;
   const reader = new FileReader();
@@ -611,95 +795,57 @@ document.getElementById('receiptUpload').addEventListener('change', function(e){
   reader.readAsDataURL(file);
 });
 
-function validateStep4(){
+function validateStep4() {
   if (!document.getElementById('paidCheck').checked) { alert('Please confirm your payment before proceeding.'); return; }
   if (!document.getElementById('receiptUpload').files.length) { alert('Please upload your payment receipt.'); return; }
   goStep(5);
 }
 
-function renderDynamicFields(){
-  const type = document.getElementById('eventType').value;
-  const wrap = document.getElementById('dynamicFields');
-  let html = '';
-  if (type === 'Wedding') {
-    html = `
-      <input id="f_theme" type="text" placeholder="Wedding Theme" class="dynField w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">
-      <input id="f_palette" type="text" placeholder="Wedding Color Palette" class="dynField w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">
-      <input id="f_bride" type="text" placeholder="Bride Name" class="dynField w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">
-      <input id="f_groom" type="text" placeholder="Groom Name" class="dynField w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">
-      <input id="f_email" type="email" required placeholder="Email Address (for sending your file)" class="dynField w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">`;
-  } else if (type === 'Birthday') {
-    html = `
-      <input id="f_theme" type="text" placeholder="Birthday Theme" class="dynField w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">
-      <input id="f_palette" type="text" placeholder="Birthday Color Palette" class="dynField w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">
-      <input id="f_celebrant" type="text" placeholder="Celebrant Name" class="dynField w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">
-      <input id="f_email" type="email" required placeholder="Email Address" class="dynField w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">`;
-  } else if (type === 'Corporate Event') {
-    html = `
-      <input id="f_company" type="text" placeholder="Company Name" class="dynField w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">
-      <input id="f_theme" type="text" placeholder="Event Theme" class="dynField w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">
-      <input id="f_palette" type="text" placeholder="Color Palette" class="dynField w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">
-      <input id="f_contact" type="text" placeholder="Contact Person" class="dynField w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">
-      <input id="f_email" type="email" required placeholder="Email Address" class="dynField w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">`;
-  } else {
-    html = `
-      <input id="f_eventname" type="text" placeholder="Event Name" class="dynField w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">
-      <input id="f_theme" type="text" placeholder="Theme" class="dynField w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">
-      <input id="f_palette" type="text" placeholder="Color Palette" class="dynField w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">
-      <input id="f_organizer" type="text" placeholder="Organizer" class="dynField w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">
-      <input id="f_email" type="email" required placeholder="Email Address" class="dynField w-full rounded-xl border border-[var(--rose-gold)]/40 bg-white/70 px-4 py-3">`;
-  }
-  wrap.innerHTML = html;
-}
-
-document.getElementById('orderForm').addEventListener('submit', function(e){
+document.getElementById('orderForm').addEventListener('submit', function(e) {
   e.preventDefault();
   const eventType = document.getElementById('eventType').value;
   const pkg = document.querySelector('input[name=package]:checked');
   const rsvpVersion = document.querySelector('input[name=rsvpVersion]:checked');
-  if (!eventType || !pkg) { alert('Please complete all steps before submitting.'); return; }
-
-  let rsvpDetails = '';
-  if (rsvpVersion && rsvpVersion.value.startsWith('Version 1')) {
-    rsvpDetails = `Main Guest: ${document.getElementById('mainGuestV1').value}, Companions: ${document.getElementById('companionCountV1').value}`;
-  } else if (rsvpVersion) {
-    const names = Array.from(document.querySelectorAll('.companionNameInput')).map(i=>i.value).filter(Boolean);
-    rsvpDetails = `Main Guest: ${document.getElementById('mainGuestV2').value}, Companions: ${names.join(', ')}`;
-  }
-
-  const dynData = {};
-  document.querySelectorAll('.dynField').forEach(f => dynData[f.placeholder] = f.value);
+  if (!eventType || !pkg) { alert('Please complete all required fields.'); return; }
+  const total = premiumUpgrade ? selectedPackagePrice + 300 : selectedPackagePrice;
 
   const templateParams = {
     to_email: 'loveanneofficial@gmail.com',
     event_type: eventType,
     package: pkg.value,
-    price: '₱' + selectedPackagePrice.toLocaleString(),
-    rsvp_version: rsvpVersion ? rsvpVersion.value : '',
-    rsvp_details: rsvpDetails,
-    payment_status: document.getElementById('paidCheck').checked ? 'Paid' : 'Pending',
-    event_details: JSON.stringify(dynData, null, 2),
+    price: '₱' + total.toLocaleString(),
+    rsvp_version: rsvpVersion ? rsvpVersion.value : 'N/A (Sponsors Invitation)',
+    rsvp_details: 'N/A — no guest inputs required',
+    payment_status: document.getElementById('paidCheck').checked ? 'Paid — receipt uploaded' : 'Pending',
+    event_details: JSON.stringify({
+      'Event Theme': document.getElementById('f_theme').value,
+      'Color Palette': document.getElementById('f_palette').value,
+      'Bride Name': document.getElementById('f_bride').value,
+      'Groom Name': document.getElementById('f_groom').value,
+      'Event Date': document.getElementById('f_eventdate').value,
+      'RSVP Deadline': document.getElementById('f_rsvpdeadline').value,
+      'Email': document.getElementById('f_email').value
+    }, null, 2),
     notes: document.getElementById('additionalNotes').value,
     date_submitted: new Date().toLocaleString('en-PH', { timeZone: 'Asia/Manila' })
   };
 
-  // Send via EmailJS if configured; otherwise just show success.
   if (window.emailjs && EMAILJS_SERVICE_ID !== 'YOUR_SERVICE_ID') {
     emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
       .then(() => showSuccess())
-      .catch(() => showSuccess()); // still confirm to user; log error separately in production
+      .catch(err => { console.error('EmailJS error:', err); showSuccess(); });
   } else {
-    console.log('Order submitted (EmailJS not configured):', templateParams);
+    console.log('Order (EmailJS not active):', templateParams);
     showSuccess();
   }
 });
 
-function showSuccess(){
-  document.getElementById('successModal').classList.remove('hidden');
-}
-function closeModal(){
+function showSuccess() { document.getElementById('successModal').classList.remove('hidden'); }
+function closeModal() {
   document.getElementById('successModal').classList.add('hidden');
   document.getElementById('orderForm').reset();
+  premiumUpgrade = false;
+  selectedPackagePrice = 0;
   goStep(1);
 }
 </script>
