@@ -48,9 +48,9 @@ input[type=radio],input[type=checkbox]{accent-color:var(--deep-rose);}
 .fancy-divider{height:1px;background:linear-gradient(90deg,transparent,var(--rose-gold),transparent);}
 .field{width:100%;border-radius:12px;border:1px solid rgba(183,110,121,0.35);background:rgba(255,255,255,0.7);padding:12px 16px;font-family:'Jost',sans-serif;font-size:14px;outline:none;transition:box-shadow .2s;}
 .field:focus{box-shadow:0 0 0 2px rgba(183,110,121,0.4);}
-/* TikTok embed overrides */
-.tiktok-wrap{position:relative;width:100%;overflow:hidden;border-radius:16px;background:#000;}
-.tiktok-wrap iframe{width:100%;display:block;border:0;}
+/* TikTok lazy embed placeholder */
+.tiktok-lazy{min-height:560px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(183,110,121,0.08),rgba(212,175,122,0.08));}
+.tiktok-lazy:empty::before{content:'💌';font-size:2rem;opacity:.4;}
 /* How it works timeline */
 .hiw-step{display:flex;gap:1.5rem;align-items:flex-start;position:relative;}
 .hiw-num{min-width:48px;height:48px;border-radius:50%;background:linear-gradient(120deg,var(--deep-rose),var(--rose-gold));color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:600;font-size:1.1rem;box-shadow:0 6px 16px -6px rgba(126,47,71,0.5);position:relative;z-index:1;}
@@ -226,16 +226,8 @@ input[type=radio],input[type=checkbox]{accent-color:var(--deep-rose);}
   <div class="max-w-6xl mx-auto mt-14">
     <p class="font-display text-xl font-semibold mb-5 text-center text-[var(--deep-rose)]">💍 Wedding RSVP</p>
     <div class="grid sm:grid-cols-2 gap-6">
-      <div class="reveal glass rounded-2xl overflow-hidden card-hover">
-        <div class="tiktok-wrap" style="height:560px;">
-          <iframe src="https://www.tiktok.com/embed/v2/7649392104715717895" height="560" allowfullscreen allow="encrypted-media" loading="lazy"></iframe>
-        </div>
-      </div>
-      <div class="reveal glass rounded-2xl overflow-hidden card-hover" style="transition-delay:.08s">
-        <div class="tiktok-wrap" style="height:560px;">
-          <iframe src="https://www.tiktok.com/embed/v2/7657215627610197255" height="560" allowfullscreen allow="encrypted-media" loading="lazy"></iframe>
-        </div>
-      </div>
+      <div class="reveal glass rounded-2xl overflow-hidden card-hover tiktok-lazy" data-video-id="7649392104715717895"></div>
+      <div class="reveal glass rounded-2xl overflow-hidden card-hover tiktok-lazy" data-video-id="7657215627610197255" style="transition-delay:.08s"></div>
     </div>
   </div>
 
@@ -243,27 +235,21 @@ input[type=radio],input[type=checkbox]{accent-color:var(--deep-rose);}
   <div class="max-w-6xl mx-auto mt-12">
     <p class="font-display text-xl font-semibold mb-5 text-center text-[var(--deep-rose)]">👑 Debut / Birthday RSVP</p>
     <div class="grid sm:grid-cols-2 gap-6">
-      <div class="reveal glass rounded-2xl overflow-hidden card-hover">
-        <div class="tiktok-wrap" style="height:560px;">
-          <iframe src="https://www.tiktok.com/embed/v2/7669275962273582357" height="560" allowfullscreen allow="encrypted-media" loading="lazy"></iframe>
-        </div>
-      </div>
-      <div class="reveal glass rounded-2xl overflow-hidden card-hover" style="transition-delay:.08s">
-        <div class="tiktok-wrap" style="height:560px;">
-          <iframe src="https://www.tiktok.com/embed/v2/7669455950218104084" height="560" allowfullscreen allow="encrypted-media" loading="lazy"></iframe>
-        </div>
-      </div>
+      <div class="reveal glass rounded-2xl overflow-hidden card-hover tiktok-lazy" data-video-id="7669275962273582357"></div>
+      <div class="reveal glass rounded-2xl overflow-hidden card-hover tiktok-lazy" data-video-id="7669455950218104084" style="transition-delay:.08s"></div>
     </div>
+  </div>
+
+  <!-- Sponsors Invitation -->
+  <div class="max-w-3xl mx-auto mt-12">
+    <p class="font-display text-xl font-semibold mb-5 text-center text-[var(--deep-rose)]">🎀 Sponsors Invitation</p>
+    <div class="reveal glass rounded-2xl overflow-hidden card-hover tiktok-lazy" data-video-id="7671145098150677781"></div>
   </div>
 
   <!-- Website -->
   <div class="max-w-3xl mx-auto mt-12">
     <p class="font-display text-xl font-semibold mb-5 text-center text-[var(--deep-rose)]">🌐 Wedding Website Invitation</p>
-    <div class="reveal glass rounded-2xl overflow-hidden card-hover">
-      <div class="tiktok-wrap" style="height:560px;">
-        <iframe src="https://www.tiktok.com/embed/v2/7645331269982686472" height="560" allowfullscreen allow="encrypted-media" loading="lazy"></iframe>
-      </div>
-    </div>
+    <div class="reveal glass rounded-2xl overflow-hidden card-hover tiktok-lazy" data-video-id="7645331269982686472"></div>
   </div>
 </section>
 
@@ -372,6 +358,7 @@ input[type=radio],input[type=checkbox]{accent-color:var(--deep-rose);}
       <div id="premiumUpgradeNote" class="hidden mt-3 p-3 rounded-xl bg-[var(--blush)] text-sm text-[var(--deep-rose)]">
         💡 <strong>Premium Version</strong> adds ₱300 to your total — includes both Open and Fixed companion.
       </div>
+      <div id="rsvpSampleWrap" class="mt-5"></div>
       <div class="mt-8 flex justify-between">
         <button type="button" onclick="goStep(2)" class="btn-outline px-8 py-3 font-medium">Back</button>
         <button type="button" onclick="validateStep3()" class="btn-primary px-8 py-3 font-medium">Next</button>
@@ -554,6 +541,7 @@ input[type=radio],input[type=checkbox]{accent-color:var(--deep-rose);}
 <a href="#order" id="floatOrder" class="fixed bottom-6 right-6 z-40 btn-primary px-6 py-3.5 font-medium shadow-2xl flex items-center gap-2">💌 Order Now</a>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script async src="https://www.tiktok.com/embed.js"></script>
 <script>
 // ---------- CONFIG ----------
 if (window.emailjs) {
@@ -610,12 +598,9 @@ safeRun('Why Choose Us', () => {
 
 safeRun('Testimonials', () => {
   const reviews = [
-    { name: 'Charize M.', type: 'Wedding Client', stars: 5, text: 'Ang ganda ng RSVP namin! Lahat ng guests namin ay super amazed. Worth it talaga ang every peso. Highly recommended!' },
-    { name: 'Mommy Liz', type: 'Debut Client', stars: 5, text: "Booking and tracking RSVPs for my daughter's 18th was so much easier. The design was exactly what we wanted. 10/10!" },
-    { name: 'Ate Joan', type: 'Wedding Client', stars: 5, text: 'Super responsive and maasikaso si Love, Anne! Nabigyan kami ng magandang design na naaayon sa theme namin. Salamat!' },
-    { name: 'HR Department', type: 'Corporate Client', stars: 5, text: 'Clean, professional, and our attendees actually used it. Exactly what we needed for our company anniversary event.' },
-    { name: 'Andrea & Miguel', type: 'Wedding Client', stars: 5, text: 'Our guests said the RSVP felt like a real luxury invitation. Everything was seamless on the big day. Thank you, Love Anne!' },
-    { name: 'Princess Reyes', type: 'Birthday Client', stars: 5, text: 'Grabe ang husay ng work! On time pa ang delivery. Ang daming compliments na natanggap namin dahil sa RSVP. Love it!' }
+    { name: 'Mica Anjanel Hernandez', type: 'Wedding Client', stars: 5, text: 'Gabi ako naginquire at nagbayad sa kanila tapos kinabukasan meron na agad silang na send na exclusive RSVP. Easy to use din siya kasi mag input ka lang ng names sa google sheet tapos automatic na siyang searchable doon sa RSVP. Di talaga makakapag RSVP yung wala sa guest list niyo. Mabilis din sila kausap if may ipapaadd ka na details or ipapabago sa design. ❤️🫶🏻' },
+    { name: 'Quennie Ann Cardeño Betonio', type: 'Wedding Client', stars: 5, text: 'Sobrang bilis po ng output, tas ang ganda na and madali lang gamitin, thanks so much.' },
+    { name: 'Jaimie De Lara', type: 'Wedding Client', stars: 5, text: 'Super fast nila ka-transact and their product will definitely help us out with our challenges when it comes to RSVP. Worth it and must have ‘to fellow brides! ☺️' }
   ];
   document.getElementById('testimonialGrid').innerHTML = reviews.map((r,i) => `
     <div class="reveal glass rounded-2xl p-6 card-hover" style="transition-delay:${i*0.07}s">
@@ -664,6 +649,53 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.10 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
+// ---------- TIKTOK LAZY EMBED ----------
+// Fix for "overload-protect": only render each embed's official blockquote
+// (via TikTok's own embed.js) the moment it actually scrolls into view,
+// one at a time, instead of firing many iframe/embed requests at once on load.
+const tiktokLoaded = new WeakSet();
+
+function renderTikTokEmbed(container) {
+  if (tiktokLoaded.has(container)) return;
+  tiktokLoaded.add(container);
+  const videoId = container.dataset.videoId;
+  container.innerHTML = `
+    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@loveanne.ph/video/${videoId}"
+      data-video-id="${videoId}" style="max-width:100%;min-width:100%;margin:0;">
+      <section></section>
+    </blockquote>`;
+  // Ask TikTok's already-loaded widget script to process this new blockquote.
+  if (window.tiktokEmbed && window.tiktokEmbed.lib && typeof window.tiktokEmbed.lib.render === 'function') {
+    try { window.tiktokEmbed.lib.render(container.querySelectorAll('.tiktok-embed')); } catch (err) { console.error('TikTok render error:', err); }
+  }
+}
+
+const tiktokObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      renderTikTokEmbed(entry.target);
+      tiktokObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '200px 0px' });
+
+function initTikTokLazyLoad() {
+  document.querySelectorAll('.tiktok-lazy').forEach(el => {
+    if (!tiktokLoaded.has(el)) tiktokObserver.observe(el);
+  });
+}
+initTikTokLazyLoad();
+
+// TikTok's embed.js periodically rescans the page for new blockquotes on its own,
+// but we nudge it once shortly after each batch renders, in case it loaded late.
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    if (window.tiktokEmbed && window.tiktokEmbed.lib && typeof window.tiktokEmbed.lib.render === 'function') {
+      try { window.tiktokEmbed.lib.render(document.querySelectorAll('.tiktok-embed')); } catch (err) {}
+    }
+  }, 800);
+});
+
 // ---------- ORDER FORM STATE ----------
 let currentStep = 1;
 let selectedPackagePrice = 0;
@@ -673,15 +705,15 @@ let premiumUpgrade = false;
 const RSVP_OPTIONS = {
   'Sponsors Invitation': null, // skip RSVP step
   'Regular Smart RSVP': [
-    { value: 'Version 1 — Open Companion', label: 'Version 1 — Open Companion', sub: 'Guest name + number of companions' },
-    { value: 'Version 2 — Fixed Companion', label: 'Version 2 — Fixed Companion', sub: 'Guest name + companion names listed' }
+    { value: 'Version 1 — Open Companion', label: 'Version 1 — Open Companion', sub: 'Guest name + number of companions', sample: '7667514237090024724' },
+    { value: 'Version 2 — Fixed Companion', label: 'Version 2 — Fixed Companion', sub: 'Guest name + companion names listed', sample: '7671318211488533780' }
   ],
   'Premium Smart RSVP': [
     { value: 'Premium Version — Open and Fixed Companion', label: 'Premium Version — Open and Fixed Companion', sub: 'Supports both open and fixed companion modes' }
   ],
   'Website Invitation + Smart RSVP': [
-    { value: 'Version 1 — Open Companion', label: 'Version 1 — Open Companion', sub: 'Guest name + number of companions' },
-    { value: 'Version 2 — Fixed Companion', label: 'Version 2 — Fixed Companion', sub: 'Guest name + companion names listed' },
+    { value: 'Version 1 — Open Companion', label: 'Version 1 — Open Companion', sub: 'Guest name + number of companions', sample: '7667514237090024724' },
+    { value: 'Version 2 — Fixed Companion', label: 'Version 2 — Fixed Companion', sub: 'Guest name + companion names listed', sample: '7671318211488533780' },
     { value: 'Premium Version — Open and Fixed Companion (+₱300)', label: 'Premium Version — Open and Fixed Companion', sub: '+₱300 • Supports both open and fixed companion modes', premium: true }
   ]
 };
@@ -734,15 +766,17 @@ function buildRsvpOptions(pkgName) {
   const options = RSVP_OPTIONS[pkgName] || [];
   const wrap = document.getElementById('rsvpOptions');
   const noteEl = document.getElementById('premiumUpgradeNote');
+  const sampleWrap = document.getElementById('rsvpSampleWrap');
   wrap.innerHTML = options.map(o => `
     <label class="flex items-start gap-3 p-4 rounded-xl border border-[var(--rose-gold)]/30 bg-white/60 cursor-pointer hover:bg-white/90 transition">
-      <input type="radio" name="rsvpVersion" value="${o.value}" class="mt-0.5" onchange="onRsvpChange(this)">
+      <input type="radio" name="rsvpVersion" value="${o.value}" data-sample="${o.sample || ''}" class="mt-0.5" onchange="onRsvpChange(this)">
       <div>
         <p class="font-medium text-sm">${o.label}</p>
         <p class="text-xs text-[var(--ink)]/50 mt-0.5">${o.sub}</p>
       </div>
     </label>`).join('');
   noteEl.classList.add('hidden');
+  sampleWrap.innerHTML = '';
 }
 
 function onRsvpChange(radio) {
@@ -753,6 +787,16 @@ function onRsvpChange(radio) {
   } else {
     premiumUpgrade = false;
     noteEl.classList.add('hidden');
+  }
+  const sampleWrap = document.getElementById('rsvpSampleWrap');
+  const sampleId = radio.dataset.sample;
+  if (sampleId) {
+    sampleWrap.innerHTML = `
+      <p class="text-xs uppercase tracking-wide text-[var(--rose-gold)] font-medium mb-2">Sample Preview</p>
+      <div class="max-w-sm mx-auto glass rounded-2xl overflow-hidden tiktok-lazy" data-video-id="${sampleId}"></div>`;
+    initTikTokLazyLoad();
+  } else {
+    sampleWrap.innerHTML = '';
   }
 }
 
